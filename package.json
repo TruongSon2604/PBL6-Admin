@@ -68,4 +68,12 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
+  ,
+  "eslintConfig": {
+  "rules": {
+    "no-unused-vars": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/img-redundant-alt": "warn"
+  }
+}
 }
