@@ -1,0 +1,30 @@
+.store {
+  width: 100%;
+  margin: 0 auto;
+}
+h1 {
+  color: red;
+}
+.pagination button {
+  margin-left: 10px;
+  padding: 2px 5px;
+}
+.store .heading {
+  display: flex;
+}
+.store-search {
+  margin-left: auto;
+}
+.pagination {
+  position: fixed;
+  top: 90%;
+  left: 47%;
+}
+.pagination .active {
+  background-color: tomato;
+}
+h1.h1-store {
+  background: linear-gradient(to bottom right, #a22fce, #ff7000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

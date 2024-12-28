@@ -1,0 +1,62 @@
+.x_content {
+  width: 100%;
+  height: 300px;
+}
+.fc.fc-media-screen {
+  /* display: block; */
+  height: 580px;
+  /* overflow-y: scroll; */
+  color: black;
+}
+
+.fc-daygrid-day:hover {
+  color: black;
+  background-color: aliceblue;
+}
+
+.fc-toolbar {
+  color: rebeccapurple;
+  color: black;
+}
+
+/* Change the color of event text */
+.fc-event {
+  color: black;
+}
+.fc-day-header {
+  color: black; /* Change day header color to black */
+}
+
+/* Change the color of the date numbers */
+.fc-daygrid-day-number {
+  color: black; /* Change date numbers color to black */
+}
+.fc-col-header-cell-cushion {
+  color: black;
+}
+.fc-event-title {
+  white-space: normal; /* Cho phép xuống dòng */
+  overflow: visible; /* Hiển thị toàn bộ nội dung */
+  text-overflow: clip; /* Không sử dụng ellipsis */
+}
+
+/* Tùy chọn thêm: có thể điều chỉnh chiều rộng của sự kiện để tối ưu hiển thị */
+.fc-event {
+  max-width: 150px; /* Điều chỉnh chiều rộng tối đa của sự kiện */
+}
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+}
+.viewmonth {
+  width: 250px;
+  height: 35px;
+}
+.viewday {
+  width: 250px;
+  height: 35px;
+}
+.selectStaff {
+  color: black;
+  font-weight: 600;
+}

@@ -1,0 +1,88 @@
+/* .dashboard .content {
+  display: flex;
+  position: absolute;
+  bottom: 7%;
+  left: 0%;
+}*/
+
+.dashboard {
+  position: relative;
+}
+.content-header {
+  width: 1200px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+.content-header .list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 35px;
+}
+.content-header .list .item {
+  padding: 25px 10px;
+  background-color: white;
+  width: 22%;
+  border-radius: 25px;
+  border: 2px solid rgb(233, 228, 228);
+}
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.img-item {
+  /* border-radius: 50%; */
+}
+.dashboard .list .item p {
+  font-size: 25px;
+}
+.img-item {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+}
+.dashboard .item {
+  position: relative;
+}
+.content-body {
+  /* position: absolute; */
+  display: flex;
+  /* left: 0px; */
+  /* bottom: 50px; */
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+
+}
+
+.content-body .chart-left {
+  /* padding: 20px 10px; */
+
+  width: 100%;
+  flex: 1;
+}
+.content-body .chart-right {
+  /* margin-left: 50px; */
+  /* padding: 20px 10px; */
+
+  width: 100%;
+  /* margin-left: auto; */
+  flex: 1;
+}
+.chart-content {
+  flex: 1;
+  margin-left: 35px;
+  width: 100%;
+}
+.line-chart,
+.bar-chart,
+.pie-chart {
+  width: 100%; /* Đảm bảo biểu đồ có chiều rộng tối đa */
+  height: 100%; /* Đảm bảo biểu đồ có chiều cao tối đa */
+}
+
+.dashboard-content{
+  margin: 0 auto;
+  justify-content: space-between;
+}

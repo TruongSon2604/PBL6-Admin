@@ -1,0 +1,124 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  user-select: none;
+  width: 100%;
+}
+/* .dashboard-content {
+  background-color: #fff;
+  flex: 1;
+  height: 97vh;
+  width: 100%;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  z-index: 2;
+  margin: 0 auto;
+} */
+.dashboard-content {
+  background-color: #fff;
+  flex: 1;
+  height: 97vh;
+  width: 85%;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  z-index: 2;
+  margin: 0 auto;
+}
+.logo .icon {
+  font-size: 14rem;
+}
+
+.side-bar {
+  width: 12%;
+  overflow: auto;
+}
+table {
+  /* box-shadow: 0 0.5rem 0.4rem #0002; */
+}
+input {
+  padding: 10px;
+  border-radius: 4px;
+  outline-color: 5px solid tomato;
+  font-size: 15px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+/* .side-bar.collaps .menu-list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.side-bar.collaps h3.admin {
+  display: none;
+}
+.side-bar.collaps {
+  width: 5%;
+}
+.side-bar.collaps .menu-list .item p {
+  display: none;
+}
+.side-bar.collaps .menu-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar.collaps .menu-list .item .icon {
+  width: 45px;
+}
+
+.side-bar.collaps div.logo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar.collaps .item .icon {
+  font-size: 25px;
+} */

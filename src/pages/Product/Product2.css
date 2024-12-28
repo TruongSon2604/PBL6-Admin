@@ -1,0 +1,47 @@
+.product .content h1 {
+  background: linear-gradient(to bottom right, #83026d, #06b9eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product table thead tr th {
+  color: #f10660;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* color: rgb(228, 223, 223); */
+}
+.product table tbody tr td {
+  font-weight: 500;
+}
+.pagination.pd button {
+  border: none;
+  padding-left: 10px;
+  padding-right: 8px;
+  font-weight: 600;
+}
+.btndelete:hover {
+  background-color: rgb(166, 159, 159);
+}
+/* .td-description {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+} */
+.block-ellipsis {
+  display: flex;
+  align-items: center;
+  display: -webkit-box;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+}
