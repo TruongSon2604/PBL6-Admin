@@ -12,7 +12,6 @@ const ChatButton = (props) => {
     const { stores, setStores } =
     useContext(StoreContext);
     const [unreadUsers,setUnreadUsers] = useState([]);
-    console();
 
     useEffect(() => {
         fetchAllStores();
