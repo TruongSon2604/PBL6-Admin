@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, useContext } from "react";
 // import { store } from "../../redux/store";
 import { format, parseISO } from "date-fns";
-import "react-image-lightbox/style.css";
-import Lightbox from "react-image-lightbox";
+import "yet-another-react-lightbox/style.css";
+import Lightbox from "yet-another-react-lightbox";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
 import "./ChatButton.css";
