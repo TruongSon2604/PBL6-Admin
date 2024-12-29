@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useContext } from "react";
 // import { store } from "../../redux/store";
 import { format, parseISO } from "date-fns";
-import "yet-another-react-lightbox/style.css";
+import 'yet-another-react-lightbox/styles.css';
 import Lightbox from "yet-another-react-lightbox";
 import { StoreContext } from "../../context/StoreContext";
 import axios from "axios";
