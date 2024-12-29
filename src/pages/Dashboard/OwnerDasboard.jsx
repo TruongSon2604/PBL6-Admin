@@ -125,8 +125,12 @@ const OwnerDasboard = () => {
         const rs = await axios.get(`${url}/api/v1/owner/display/budget/all`, {
           headers,
         });
+        
+        // console.log("budget",rs.data.data / 1000000);
+        const vl = rs.data.data / 1000000;
+        console.log("vl",vl);
+        setallbudger(vl);
 
-        setallbudger(rs.data.data); // Cập nhật state với dữ liệu phản hồi từ API
       } catch (error) {
         console.error("Lỗi khi lấy dữ liệu:", error);
       }
@@ -359,7 +363,7 @@ const OwnerDasboard = () => {
                 style={{ objectFit: "cover", marginTop: "25px" }}
               />
             </div>
-            <h3>{allbudger == null ? 0 : Math.floor(allbudger / 1)}</h3>{" "}
+            <h3>{allbudger}</h3>{" "}
             <span>(triệu đồng)</span>
           </div>
           <div className="item">

@@ -27,8 +27,9 @@ const SoundNotification = ({ url }) => {
         mess.current = response.data.data[newCount - 1].content;
         console.log("mes", mess.current);
 
-        if (newCount > vlcurrent.current) {
+        if (newCount > localStorage.getItem('notify')) {
           vlcurrent.current = newCount;
+          localStorage.setItem('notify',vlcurrent.current);
           setApiResult(true);
           playSound();
         }

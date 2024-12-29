@@ -122,8 +122,9 @@ const Dashboard = () => {
         const rs = await axios.get(`${url}/api/v1/admin/display/budget/all`, {
           headers,
         });
-
-        setallbudger(rs.data.data); // Cập nhật state với dữ liệu phản hồi từ API
+        const vl = rs.data.data / 1000000;
+        console.log("value budget admin",vl);
+        setallbudger(vl);
       } catch (error) {
         console.error("Lỗi khi lấy dữ liệu:", error);
       }
@@ -133,27 +134,27 @@ const Dashboard = () => {
   }, []);
 
   //all order of month
-  useEffect(() => {
-    const fetchData2 = async () => {
-      try {
-        const tk = localStorage.getItem("access_token");
-        const headers = {
-          Authorization: `Bearer ${tk}`,
-          "Content-Type": "application/json",
-        };
+  // useEffect(() => {
+  //   const fetchData2 = async () => {
+  //     try {
+  //       const tk = localStorage.getItem("access_token");
+  //       const headers = {
+  //         Authorization: `Bearer ${tk}`,
+  //         "Content-Type": "application/json",
+  //       };
 
-        const rs = await axios.get(`${url}/api/v1/admin/display/budget/all`, {
-          headers,
-        });
+  //       const rs = await axios.get(`${url}/api/v1/admin/display/budget/all`, {
+  //         headers,
+  //       });
 
-        setallbudger(rs.data.data); // Cập nhật state với dữ liệu phản hồi từ API
-      } catch (error) {
-        console.error("Lỗi khi lấy dữ liệu:", error);
-      }
-    };
+  //       setallbudger(rs.data.data); // Cập nhật state với dữ liệu phản hồi từ API
+  //     } catch (error) {
+  //       console.error("Lỗi khi lấy dữ liệu:", error);
+  //     }
+  //   };
 
-    fetchData2();
-  }, []);
+  //   fetchData2();
+  // }, []);
 
   //all weekly
   useEffect(() => {
@@ -385,7 +386,7 @@ const Dashboard = () => {
                 style={{ objectFit: "cover", marginTop: "25px" }}
               />
             </div>
-            <h3>{allbudger == null ? 0 : (allbudger / 1000000).toFixed(3)}</h3>{" "}
+            <h3>{allbudger}</h3>{" "}
             <span>( triệu đồng)</span>
           </div>
           <div className="item">
