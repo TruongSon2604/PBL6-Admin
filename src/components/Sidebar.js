@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
 import {
   BiHome,
   BiMessage,
@@ -16,6 +17,9 @@ import "../styles/Sidebar.css";
 import { StoreContext } from "../context/StoreContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FaCalendarAlt } from "react-icons/fa";
+import { GoPackage } from "react-icons/go";
+import { FaGift } from "react-icons/fa";
 
 const Sidebar = () => {
   const { setIsAuthenticated, setUserData, userData } =
@@ -195,6 +199,42 @@ const Sidebar = () => {
                   <FontAwesomeIcon icon={faChevronDown} />
                 </p>
               </div>
+
+              <div className="item" onClick={() => toggleSubMenu("voucher")}>
+                {/* <BiLogoProductHunt className="icon icon-item" /> */}
+                <Link to="/admin/promotion" className="linkitem">
+                <FaGift />
+                </Link>
+                <p>
+                  Voucher
+                  <div
+                    className={
+                      openSubMenus["voucher"]
+                        ? "sub-menu active-sub"
+                        : "sub-menu hidden"
+                    }
+                  >
+                    <ul className="sub-item">
+                      <li onClick={(e) => e.stopPropagation()}>
+                        {" "}
+                        <Link to="/admin/voucher">Voucher</Link>
+                      </li>
+                      <li onClick={(e) => e.stopPropagation()}>
+                        <Link to="/admin/addVoucher">Add Voucher</Link>
+                      </li>
+                      <li onClick={(e) => e.stopPropagation()}>
+                        <Link to="/admin/addVoucherToStore">
+                          Add Voucher To Store
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </p>
+                <p className="dropdownn">
+                  <FontAwesomeIcon icon={faChevronDown} />
+                </p>
+              </div>
+
               <div className="item" onClick={() => toggleSubMenu("combo")}>
                 {/* <BiLogoProductHunt className="icon icon-item" /> */}
                 <Link to="/admin/promotion" className="linkitem">
@@ -301,7 +341,7 @@ const Sidebar = () => {
               <div className="item" onClick={() => toggleSubMenu("ocalendar")}>
                 {/* <BiLogoProductHunt className="icon icon-item" /> */}
                 <Link to="/admin/calender" className="linkitem">
-                  <BiLogoProductHunt className="icon icon-item" />
+                <FaCalendarAlt style={{marginBottom:"-7px"}} />
                 </Link>
                 <p>
                   Calendar
@@ -326,7 +366,7 @@ const Sidebar = () => {
               <div className="item" onClick={() => toggleSubMenu("Oorder")}>
                 {/* <BiLogoProductHunt className="icon icon-item" /> */}
                 <Link to="/admin/product" className="linkitem">
-                  <BiLogoProductHunt className="icon icon-item" />
+                <GoPackage style={{marginBottom:"-7px"}} />
                 </Link>
                 <p>
                   Order
@@ -352,7 +392,7 @@ const Sidebar = () => {
               <div className="item" onClick={() => toggleSubMenu("OStaff")}>
                 {/* <BiLogoProductHunt className="icon icon-item" /> */}
                 <Link to="/owner/AddStaff" className="linkitem">
-                  <BiLogoProductHunt className="icon icon-item" />
+                <FaUser />
                 </Link>
                 <p>
                   Staff

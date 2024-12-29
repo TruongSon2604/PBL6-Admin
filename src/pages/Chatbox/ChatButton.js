@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ChatButton = (props) => {
     const {showChat,setShowChat,product ,url} = props;
-    const [newMessagesCount, setNewMessagesCount] = useState(1);
+    const [newMessagesCount, setNewMessagesCount] = useState(0);
     const token = localStorage.getItem("access_token");
     const { stores, setStores } =
     useContext(StoreContext);

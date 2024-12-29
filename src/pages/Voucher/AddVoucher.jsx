@@ -3,14 +3,13 @@ import { assets } from "../../assets/assets.js";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
-const AddPromotion = ({ url }) => {
+const AddVoucher = ({ url }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
-    promotionName: "",
-    discount: "",
+    discountPercent: "",
     description: "",
-    startDate: "",
-    endDate: "",
+    startDate:"",
+    endDate:""
   });
 
   //get user
@@ -25,42 +24,45 @@ const AddPromotion = ({ url }) => {
     setData((data) => ({ ...data, [name]: value }));
   };
 
+  const formatDateTime = (dateTime) => {
+    return dateTime.replace("T", " ") + ":00"; // Thêm giây nếu cần
+  };
+
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     const tk = localStorage.getItem("access_token");
-
+  
     if (!tk) {
       toast.error("Access token is missing");
       return;
     }
-
+  
     const headers = {
       Authorization: `Bearer ${tk}`,
-      "Content-Type": "application/json",
+      "Content-Type": "application/json", // Đảm bảo định dạng JSON
     };
-
-    const formData = new FormData();
-    formData.append("promotionName", data.promotionName);
-    formData.append("discount", data.discount);
-    formData.append("description", data.description);
-    formData.append("startDate", data.startDate);
-    formData.append("endDate", data.endDate);
-    formData.append("image", image);
+  
+    const jsonData = {
+      discountPercent: data.discountPercent,
+      description: data.description,
+      startDate: formatDateTime(data.startDate), // Chuyển đổi định dạng
+      endDate: formatDateTime(data.endDate), // Chuyển đổi định dạng
+    };
+  
     try {
       const response = await axios.post(
-        `${url}/api/v1/admin/promotions/add`,
-        formData,
+        `${url}/api/v1/admin/voucher/add`,
+        JSON.stringify(jsonData), // Chuyển đổi dữ liệu sang chuỗi JSON
         { headers }
       );
+  
       if (response.data.message) {
         setData({
-          promotionName: "",
-          discount: "",
+          discountPercent: "",
           description: "",
           startDate: "",
           endDate: "",
         });
-        setImage(null);
         toast.success("Added Promotion");
       } else {
         toast.error(response.data.message);
@@ -68,7 +70,6 @@ const AddPromotion = ({ url }) => {
     } catch (error) {
       if (error.response) {
         console.error("Error Response Data:", error.response.data);
-
         toast.error(error.response.data.message || "Something went wrong.");
       } else {
         console.error("Error:", error.message);
@@ -76,63 +77,34 @@ const AddPromotion = ({ url }) => {
       }
     }
   };
-  useEffect(() => {
-    console.log("data", data);
+  
 
-    console.log("selectedUserId", selectedUserId);
-    console.log("bestSale", bestSale);
-    console.log("data.stockQuantity", data.stockQuantity);
-  });
+    useEffect(() => {
+      console.log("data", data);
+  
+      console.log("discountPercent", data.discountPercent);
+      console.log("description", data.description);
+      console.log("startDate", data.startDate);
+      console.log("startDate", data.endDate);
+    });
+  
 
   return (
     <div className="add add-product">
       <div className="cover-left1">
-        <h2 className="">Add Promotion</h2>
+        <h2 className="">Add Voucher</h2>
         <form className="flex-col" onSubmit={onSubmitHandler}>
           <table className="form-table">
             <tbody>
               <tr>
-                <td className="td-text">Upload Image</td>
-                <td>
-                  <label htmlFor="image">
-                    <img
-                      className="img-uploa  d"
-                      src={
-                        image ? URL.createObjectURL(image) : assets.upload_area
-                      }
-                      alt=""
-                    />
-                  </label>
-                  <input
-                    onChange={(e) => setImage(e.target.files[0])}
-                    type="file"
-                    id="image"
-                    hidden
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Promotion Name</td>
+                <td>discountPercent</td>
                 <td>
                   <input
                     onChange={onChangeHandler}
-                    value={data.promotionName}
+                    value={data.discountPercent}
                     type="text"
-                    name="promotionName"
+                    name="discountPercent"
                     placeholder="Type here"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Discount</td>
-                <td>
-                  <input
-                    name="discount"
-                    type="text"
-                    placeholder="Write content here"
-                    onChange={onChangeHandler}
-                    value={data.discount}
                   />
                 </td>
               </tr>
@@ -183,15 +155,10 @@ const AddPromotion = ({ url }) => {
         </form>
       </div>
       <div className="cover-right">
-        <img
-          className="img-uploa  d"
-          src={image ? URL.createObjectURL(image) : assets.upload_area}
-          alt=""
-        />
       </div>
       <ToastContainer />
     </div>
   );
 };
 
-export default AddPromotion;
+export default AddVoucher;

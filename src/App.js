@@ -44,6 +44,9 @@ import OrderDetail from "./PagesOwner/Order/OrderDetails";
 import SoundNotification from "./components/Notify/Notify";
 import Shiper from "./pages/Shiper/Shiper";
 import PaginationExample from "./pages/test1/Test1";
+import AddVoucher from "./pages/Voucher/AddVoucher";
+import Voucher from "./pages/Voucher/Voucher";
+import AddVoucherToStore from "./pages/Voucher/AddVoucherToStore";
 
 const notificationSound = new Audio("/sound/tingting.mp3");
 const App = () => {
@@ -378,6 +381,63 @@ const App = () => {
                 )
               }
             />
+        
+        <Route
+              path="/admin/addVoucher"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/" />
+                ) : (
+                  <>
+                    <div className="dashboard">
+                      <Sidebar />
+                      <div className="dashboard-content">
+                        <AddVoucher url={url} />
+                      </div>
+                    </div>
+                  </>
+                )
+              }
+            />
+
+            <Route
+              path="/admin/voucher"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/" />
+                ) : (
+                  <>
+                    <div className="dashboard">
+                      <Sidebar />
+                      <div className="dashboard-content">
+                        <Voucher url={url} />
+                      </div>
+                    </div>
+                  </>
+                )
+              }
+            />
+
+          <Route
+              path="/admin/addVoucherToStore"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/" />
+                ) : (
+                  <>
+                    <div className="dashboard">
+                      <Sidebar />
+                      <div className="dashboard-content">
+                        <AddVoucherToStore url={url} />
+                      </div>
+                    </div>
+                  </>
+                )
+              }
+            />
+              
+
+
             {/* endupdate PRomotion */}
             <Route
               path="/admin/Combo"
