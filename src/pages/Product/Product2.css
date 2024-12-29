@@ -32,16 +32,10 @@
   word-wrap: break-word;
 } */
 .block-ellipsis {
-  display: flex;
-  align-items: center;
-  display: -webkit-box;
-  max-width: 100%;
-  margin: 0 auto;
-  font-size: 14px;
-  line-height: 1;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  height: 93px !important;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
-  align-items: center;
 }
