@@ -36,4 +36,3 @@ jobs:
           app_location: "/" # Đường dẫn mã nguồn ứng dụng
           api_location: "" # Đường dẫn mã nguồn API (nếu không có thì để trống)
           output_location: "build" # Thư mục chứa nội dung sau khi build
-          deployment_action: "deploy" # Hành động triển khai đầy đủ
