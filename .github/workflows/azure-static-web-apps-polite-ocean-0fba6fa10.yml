@@ -19,6 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      # Step to install dependencies using --legacy-peer-deps
+      - name: Install Dependencies
+        run: |
+          npm install --legacy-peer-deps
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
