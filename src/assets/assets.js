@@ -16,6 +16,7 @@ import itemSold from "./itemSold.png";
 import itemSold2 from "./itemSold2.png";
 import revenue from "./revenue.png";
 import manOrder from "./manOrder.png";
+import iconAdmin from "./iconAdmin.png";
 export const assets = {
   logo,
   add_icon,
@@ -37,4 +38,5 @@ export const assets = {
   budgett3,
   revenue,
   manOrder,
+  iconAdmin,
 };
