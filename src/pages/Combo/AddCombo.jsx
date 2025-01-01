@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const AddCombo = () => {
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
-
-// export default AddCombo;
 
 import React, { useState, useEffect } from "react";
 import "./AddCombo.css";
@@ -24,13 +13,11 @@ const AddCombo = ({ url }) => {
     description: "",
   });
 
-  //get user
   const [cate, setCate] = useState([]);
   const [selectedUserId, setSelectedUserId] = useState("");
   const [bestSale, setbestSale] = useState("");
   const token = localStorage.getItem("access_token");
 
-  //
 
   const onChangeHandler = (event) => {
     const name = event.target.name;

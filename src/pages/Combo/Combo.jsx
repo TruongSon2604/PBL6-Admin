@@ -110,7 +110,7 @@ const Combo = ({ url }) => {
           <div className="store-search">
             <input
               type="text"
-              placeholder="Search Name Product"
+              placeholder="Search Combo"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{

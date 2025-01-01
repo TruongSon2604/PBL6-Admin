@@ -141,7 +141,7 @@ const Shiper = ({ url }) => {
           <div className="store-search">
             <input
               type="text"
-              placeholder="Search Name Product"
+              placeholder="Search Shiper"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{

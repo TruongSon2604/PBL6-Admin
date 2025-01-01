@@ -106,7 +106,7 @@ const Promotion = ({ url }) => {
             <input
               style={{ padding: 5, borderColor: "tomato", borderRadius: 5 }}
               type="text"
-              placeholder="Search by store name"
+              placeholder="Search Promotion"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

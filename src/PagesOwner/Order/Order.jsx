@@ -137,6 +137,18 @@ const Order = ({ url }) => {
               <option value="Đơn hàng đã được xác nhận">
                 Lịch sử xác nhận
               </option>
+              <option value="Đơn hàng đã chọn được người giao">
+              Đơn hàng đã chọn được người giao
+              </option>
+              <option value="Đơn hàng đã được người giao nhận">
+              Đơn hàng đã được người giao nhận
+              </option>
+              <option value="Đơn hàng đang giao">
+              Đơn hàng đang giao
+              </option>
+              <option value="Đơn hàng đã hoàn thành">
+              Đơn hàng đã hoàn thành
+              </option>
               <option value="Đơn hàng đã bị hủy">Đơn hàng đã hủy</option>
             </select>
           </div>

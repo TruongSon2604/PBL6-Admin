@@ -3,9 +3,7 @@
   height: 300px;
 }
 .fc.fc-media-screen {
-  /* display: block; */
   height: 580px;
-  /* overflow-y: scroll; */
   color: black;
 }
 
@@ -19,30 +17,27 @@
   color: black;
 }
 
-/* Change the color of event text */
 .fc-event {
   color: black;
 }
 .fc-day-header {
-  color: black; /* Change day header color to black */
+  color: black;
 }
 
-/* Change the color of the date numbers */
 .fc-daygrid-day-number {
-  color: black; /* Change date numbers color to black */
+  color: black; 
 }
 .fc-col-header-cell-cushion {
   color: black;
 }
 .fc-event-title {
-  white-space: normal; /* Cho phép xuống dòng */
-  overflow: visible; /* Hiển thị toàn bộ nội dung */
-  text-overflow: clip; /* Không sử dụng ellipsis */
+  white-space: normal;
+  overflow: visible; 
+  text-overflow: clip;
 }
 
-/* Tùy chọn thêm: có thể điều chỉnh chiều rộng của sự kiện để tối ưu hiển thị */
 .fc-event {
-  max-width: 150px; /* Điều chỉnh chiều rộng tối đa của sự kiện */
+  max-width: 150px;
 }
 .calendar-controls {
   display: flex;

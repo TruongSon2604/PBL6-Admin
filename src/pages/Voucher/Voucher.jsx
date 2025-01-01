@@ -105,7 +105,7 @@ const Voucher = ({ url }) => {
           <div className="store-search">
             <input
               type="text"
-              placeholder="Search Name Product"
+              placeholder="Search Voucher"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{
